@@ -61,7 +61,7 @@ print(min_lam)
 # plt.show()
 w,err = ridge_regression(X_train, y_train, X_cross, y_cross, min_lam)
 
-with open('./data_train/20142090-test.csv') as csvfile:
+with open('./data_train/20144067-test.csv') as csvfile:
     Xy = np.loadtxt(csvfile, delimiter=',', dtype=float)
 
 X_test = Xy[:, 0:-1]
@@ -77,6 +77,6 @@ res = np.column_stack((X,y_pred))
 res = res[:,1:]
 
 res = np.array(res)
-np.savetxt("20142090.csv", res, delimiter=',',fmt='%f')
+np.savetxt("20144067.csv", res, delimiter=',',fmt='%f')
 plt.show()
 
